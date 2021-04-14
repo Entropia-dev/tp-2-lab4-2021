@@ -87,8 +87,7 @@ public class Empleado{
 		Empleado other = (Empleado) obj;
 		if (edad != other.edad)
 			return false;
-		if (id != other.id)
-			return false;
+		//if (id != other.id) return false;
 		if (nombre == null) {
 			if (other.nombre != null)
 				return false;
