@@ -1,30 +1,38 @@
 package ejercicio3;
 
-public class Polideportivo extends Inmueble implements IEdificio, IInstalacionDeportiva {
+public class Polideportivo implements IEdificio, IInstalacionDeportiva {
 	
-	private double superficie;
+	private double superficieEdificio;
 	
 	private int tipoDeInstalacion;
 	
-	public Polideportivo(double superficie, int tipoDeInstalacion)
+	private String nombre;
+	public Polideportivo(String nombre, double superficie, int tipoDeInstalacion)
 	{
-		this.superficie = superficie;
+		this.superficieEdificio = superficie;
 		this.tipoDeInstalacion = tipoDeInstalacion;
+		this.nombre = nombre;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "Superficie: "+superficie+", Tipo de instalacion:"+tipoDeInstalacion;
+		return "Nombre: " + nombre + ", Superficie: " + superficieEdificio + ", Tipo de instalacion:" + tipoDeInstalacion;
 	}
-	
-	public int getTipoDeInstalacion()
-	{
-		return this.tipoDeInstalacion;
+
+	public double getSuperficieEdificio() {
+		return superficieEdificio;
 	}
-	
-	public double getSuperficieEdificio()
-	{
-		return this.superficie;
+
+	public int getTipoDeInstalacion() {
+		return tipoDeInstalacion;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 }

@@ -6,19 +6,19 @@ import java.util.ListIterator;
 public class mainEjercicio3 {
 
 	public static void main(String[] args) {
+		ArrayList<IEdificio> edificios = new ArrayList<IEdificio>();
+		edificios.add(new Polideportivo("Belgrano", 100.50, 1));
+		edificios.add(new EdificioDeOficinas(40, 30.50));
+		edificios.add(new Polideportivo("R. Rojas", 40.50, 2));
+		edificios.add(new Polideportivo("M. Moreno", 42.50, 2));
+		edificios.add(new EdificioDeOficinas(60, 32));
 		
-		ArrayList<Inmueble> listaInmuebles = new ArrayList<Inmueble>();
-		listaInmuebles.add(new Polideportivo(100.50, 10));
-		listaInmuebles.add(new EdificioDeOficinas());
-		listaInmuebles.add(new Polideportivo(20.50, 9));
-		
-		ListIterator<Inmueble> it = listaInmuebles.listIterator();
-		
+		ListIterator<IEdificio> it = edificios.listIterator();
+		System.out.println("Listado de Polideportivos y Edificios de oficinas: ");
 		while (it.hasNext()) {
-			Inmueble inmueble = it.next();
-			System.out.println(inmueble.toString());
+			IEdificio edificio = it.next();
+			System.out.println(edificio.toString());
 		}
-
 	}
 
 }
